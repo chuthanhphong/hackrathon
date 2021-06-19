@@ -9,7 +9,6 @@ public class InputOutPut {
         Question question = new Question();
         System.out.println("Please input ID Questions : ");
         int id = -1;
-
         do {
             try {
                 id = Integer.parseInt(sc.nextLine());

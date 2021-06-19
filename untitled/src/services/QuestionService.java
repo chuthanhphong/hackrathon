@@ -77,14 +77,21 @@ public class QuestionService implements GeneralService<Question> {
         }
     }
 
-    @Override
-    public Question findByID(int id) {
-        for(int i=0;i<list.size();i++){
-            if(id==list.get(i).getId()){
-                return list.get(i);
+    public int checkId(int id){
+        for (int i = 0; i < this.list.size(); i++) {
+            if (id==list.get(i).getId()){
+                return i;
             }
         }
-        return null;
+        return -1;
+    }
+    @Override
+    public Question findByID(int id) {
+        if (checkId(id) == -1){
+            return null;
+        }else {
+            return this.list.get(id);
+        }
     }
 
     @Override

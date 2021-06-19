@@ -7,7 +7,9 @@ public class Test {
 
     Question question = new Question();
     QuestionService questionService = new QuestionService();
+        for (int i = 0; i < 10; i++) {
 
+        }
 
         questionService.playGame();
 
