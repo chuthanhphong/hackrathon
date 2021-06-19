@@ -41,9 +41,9 @@ public class QuestionService implements GeneralService<Question> {
 
     public QuestionService() {
         try {
-            this.list = questionIO.readFromFile("Quizz.csv");
+            this.list = questionIO.readFromFile("D:\\New folder\\Hackathon\\DataQuizzhihii.csv");
         } catch (IOException e) {
-            this.list = new ArrayList<>();
+            e.printStackTrace();
         }
     }
 
