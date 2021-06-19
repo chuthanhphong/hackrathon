@@ -96,7 +96,7 @@ public class QuestionService implements GeneralService<Question> {
 
     public void playGame() {
       for(Question question:list){
-          System.out.println(question);
+          System.out.println(question.prompt());
           String aswner = InputOutPut.Inputanswer();
           if(check(aswner,question.getAnswer())){
               addPoint();
