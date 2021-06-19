@@ -95,10 +95,16 @@ public class QuestionService implements GeneralService<Question> {
     }
 
     public void playGame() {
-
-        int i = (int) (Math.random() * list.size()) +1;
-        System.out.println(question.prompt());
-
+      for(Question question:list){
+          System.out.println(question);
+          String aswner = InputOutPut.Inputanswer();
+          if(check(aswner,question.getAnswer())){
+              addPoint();
+              System.out.println("Bạn đã trả lời đúng");
+          }else{
+              System.out.println("Bạn đã trả lời sai \n Đáp án đúng là : " + question.getAnswer());
+          }
+      }
 
         System.out.println("Số điểm của bạn là :" + point);
         for(Question question:list){
